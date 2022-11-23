@@ -34,7 +34,9 @@ connection.once("open", ()=>{
 
 
 
-
+app.use("/", (req, res)=>{
+    res.json({message: "Hello from express app"});
+})
 
 //ROUTING SETUP------------------------------------------------------------------
 const songRouter = require('./routes/songRouter');
